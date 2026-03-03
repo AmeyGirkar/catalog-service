@@ -8,10 +8,14 @@ import (
 func main() {
 	r := gin.Default()
 
+	// Placeholder for MySQL connection
+	// dbUrl := os.Getenv("DB_URL")
+
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
-			"service": "Catalog Service",
-			"status":  "running",
+			"service":  "Catalog Service",
+			"status":   "running",
+			"database": "MySQL",
 		})
 	})
 
